@@ -10,7 +10,6 @@ class _HomeBottomLeftTopState extends State<HomeBottomLeftTop> {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        height: MediaQuery.of(context).size.height / 4,
         color: Colors.green,
       ),
     );

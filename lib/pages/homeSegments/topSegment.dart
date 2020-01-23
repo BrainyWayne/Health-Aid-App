@@ -11,12 +11,10 @@ class _homeTopSegmentState extends State<homeTopSegment> {
     return Material(
       child: Container(
         child: Container(
-          height: MediaQuery.of(context).size.height / 2,
           color: Colors.red,
           child: Stack(
             children: <Widget>[
               Container(
-                  height: MediaQuery.of(context).size.height / 2,
                   child: Image.asset(
                     "assets/heart.png",
                     fit: BoxFit.cover,

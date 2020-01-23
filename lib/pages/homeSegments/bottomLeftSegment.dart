@@ -12,7 +12,6 @@ class _HomeBottomLeftSegmentState extends State<HomeBottomLeftSegment> {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        width: MediaQuery.of(context).size.width / 2,
         color: Colors.green,
         child: Container(
           child: Column(

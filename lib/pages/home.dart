@@ -16,19 +16,20 @@ class _HomeState extends State<Home> {
       curve: Curves.easeInExpo,
       child: Stack(
         children: <Widget>[
-          Column(
-            children: <Widget>[
-              homeTopSegment(),
-              Container(
-                height: MediaQuery.of(context).size.height / 2,
-                child: Row(
-                  children: <Widget>[
-                    HomeBottomLeftSegment(),
-                    HomeBottomRightSegment(),
-                  ],
-                ),
-              )
-            ],
+          SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                homeTopSegment(),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      HomeBottomLeftSegment(),
+                      HomeBottomRightSegment(),
+                    ],
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),
