@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+
 class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();
@@ -27,6 +29,7 @@ class _LoginState extends State<Login> {
                     clipper: SecondWaveClipper(),
                     child: Stack(
                       children: <Widget>[
+                        Image.asset("assets/heart.png"),
                         Container(
                           height: 220,
                           color: Colors.blue.withOpacity(0.6),
@@ -38,36 +41,34 @@ class _LoginState extends State<Login> {
                     clipper: WaveClipper(),
                     child: Stack(
                       children: <Widget>[
-                        Container(height: 200, color: Colors.blue.withOpacity(0.8)),
+                        Container(
+                            height: 200, color: Colors.blue.withOpacity(0.8)),
                       ],
                     ),
                   ),
-
                   Container(
                     margin: EdgeInsets.only(top: 80, left: 50),
                     child: Row(
                       children: <Widget>[
                         Text("health",
-                        style: TextStyle(
-                          color: Colors.white,
-                         
-                          fontSize: 25,
-                        )),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 25,
+                            )),
                         Text("Aid",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
-                        )),
-
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                            )),
                         Text(" App",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
-                        )),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                            )),
                       ],
-                    )
+                    ),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 200),
@@ -171,16 +172,25 @@ class _LoginState extends State<Login> {
                                 ],
                               ),
                               SizedBox(height: 30),
-                              Container(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 40, vertical: 10),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: Colors.blue),
-                                child: Text("Sign up",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold)),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              Home()));
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 40, vertical: 12),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Colors.blue),
+                                  child: Text("Sign up",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                ),
                               ),
                               SizedBox(height: 30),
                               Text("I am already a member",
