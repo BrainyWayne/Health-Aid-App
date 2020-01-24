@@ -11,17 +11,17 @@ class _homeTopSegmentState extends State<homeTopSegment> {
     return Material(
       child: Container(
         child: Container(
-          color: Colors.red,
+          color: Colors.white,
           child: Stack(
             children: <Widget>[
-              Container(
-                  child: Image.asset(
-                    "assets/heart.png",
-                    fit: BoxFit.cover,
-                  )),
+              // Container(
+              //     child: Image.asset(
+              //       "assets/heart.png",
+              //       fit: BoxFit.cover,
+              //     )),
               Container(
                 decoration: BoxDecoration(
-                  color: Color(0xffcc00008b),
+                  color: Colors.white
                 ),
               ),
               Container(
@@ -29,7 +29,7 @@ class _homeTopSegmentState extends State<homeTopSegment> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
-                    Icon(Icons.menu, color: Colors.white),
+                    Icon(Icons.menu, color: Color(0xffcc00008b)),
                     SizedBox(
                       width: 20,
                     ),
@@ -38,13 +38,13 @@ class _homeTopSegmentState extends State<homeTopSegment> {
                       children: <Widget>[
                         Text("health",
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Color(0xffcc00008b),
                               fontSize: 20,
                             )),
                         Text(
                           "Aid",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Color(0xffcc00008b),
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
@@ -71,7 +71,7 @@ class _homeTopSegmentState extends State<homeTopSegment> {
                     Text(
                       "Francis Eshun",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xffcc00008b),
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),
@@ -81,38 +81,44 @@ class _homeTopSegmentState extends State<homeTopSegment> {
               ),
               Container(
                 margin:
-                    EdgeInsets.only(top: 230, left: 0, right: 20, bottom: 20),
+                    EdgeInsets.only(top: 230, left: 20, right: 20, bottom: 20),
                 child: Column(
                   children: <Widget>[
                     Row(
+                      
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Container(
-                          height: 3,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 7,
-                        ),
+                        
+                        
                         Text(
-                          "Weather Update",
-                          style: TextStyle(color: Colors.white, fontSize: 15),
+                          "Weather",
+                          style: TextStyle(color: Color(0xffcc00008b), fontSize: 23),
+                        ),
+
+                        Text(
+                          "View more",
+                          style: TextStyle(color: Color(0xffcc00008b), fontSize: 15),
                         ),
                       ],
                     ),
                     Container(
+                      margin: EdgeInsets.only(left: 18, top: 10),
+                      decoration: BoxDecoration(
+                        color: Colors.red.withOpacity(0.3),
+                        borderRadius: BorderRadius.circular(15)
+                      ),
+                      child: Container(
                       margin: EdgeInsets.only(
-                          top: 20, left: 30, right: 20, bottom: 5),
+                          top: 20, left: 30, right: 20, bottom: 15),
                       child: Row(
                         children: <Widget>[
                           Text("36",
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 40)),
+                                  TextStyle(color: Color(0xffcc00008b), fontSize: 40)),
                           Text(
                             "\u00b0",
-                            style: TextStyle(color: Colors.white, fontSize: 45),
+                            style: TextStyle(color: Color(0xffcc00008b), fontSize: 45),
                           ),
                           SizedBox(
                             width: 20,
@@ -133,15 +139,16 @@ class _homeTopSegmentState extends State<homeTopSegment> {
                             children: <Widget>[
                               Text("Kumasi",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 18)),
+                                      color: Color(0xffcc00008b), fontSize: 18)),
                               SizedBox(height: 3),
                               Text("Mostly Sunny",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 15)),
+                                      color: Color(0xffcc00008b), fontSize: 15)),
                             ],
                           )
                         ],
                       ),
+                    ),
                     )
                   ],
                 ),

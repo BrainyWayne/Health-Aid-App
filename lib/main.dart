@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_aid_app/pages/login.dart';
+import 'package:health_aid_app/pages/signup.dart';
 
 void main() => runApp(MyApp());
 
@@ -48,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
-    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Login()));
+    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SignUp()));
   }
 
   @override
