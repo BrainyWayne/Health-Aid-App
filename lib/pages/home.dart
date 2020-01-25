@@ -65,16 +65,20 @@ class _HomeState extends State<Home> {
                             children: <Widget>[
                               Hero(
                                 tag: "widget",
-                                                              child: Container(
+                                child: Container(
                                   height: 300,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(15),
                                       color: Colors.red),
                                   child: InkWell(
-                                    onTap: (){
-                                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => WeatherDetails()));
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (BuildContext context) =>
+                                                  WeatherDetails()));
                                     },
-                                                                    child: Padding(
+                                    child: Padding(
                                       padding: const EdgeInsets.all(12.0),
                                       child: Column(
                                         children: <Widget>[
@@ -86,12 +90,16 @@ class _HomeState extends State<Home> {
                                                   style: TextStyle(
                                                       color: Colors.white
                                                           .withOpacity(0.9),
-                                                      fontWeight: FontWeight.bold,
+                                                      fontWeight:
+                                                          FontWeight.bold,
                                                       fontSize: 20)),
-                                              Icon(
-                                                Icons.web_asset,
+                                              Container(
+                                                height: 30,
+                                                width: 30,
+                                                  child: Image.asset(
+                                                'assets/sun.png',
                                                 color: Colors.white,
-                                              )
+                                              ))
                                             ],
                                           ),
                                           Container(
@@ -177,90 +185,90 @@ class _HomeState extends State<Home> {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   color: Colors.green),
-                                  child: Padding(
-                                  padding: const EdgeInsets.all(12.0),
-                                  child: Column(
-                                    children: <Widget>[
-                                      Row(
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Text("Specialist",
+                                            style: TextStyle(
+                                                color: Colors.white
+                                                    .withOpacity(0.9),
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20)),
+                                        Container(
+                                                height: 30,
+                                                width: 30,
+                                                  child: Image.asset(
+                                                'assets/specialist.png',
+                                                color: Colors.white,
+                                              ))
+                                      ],
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          top: 30,
+                                          left: 30,
+                                          right: 30,
+                                          bottom: 30),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Column(
+                                            children: <Widget>[
+                                              Text(
+                                                  "Connect",
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18)),
+                                              SizedBox(height: 3),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Container(
+                                height: 300,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.blue),
+                                child: Column(
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.all(15.0),
+                                      child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: <Widget>[
-                                          Text("Specialist",
+                                          Text("Health Tips",
                                               style: TextStyle(
                                                   color: Colors.white
                                                       .withOpacity(0.9),
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 20)),
                                           Icon(
-                                            Icons.account_circle,
+                                            Icons.healing,
                                             color: Colors.white,
                                           )
                                         ],
                                       ),
-                                      Container(
-                                        margin: EdgeInsets.only(
-                                            top: 30,
-                                            left: 30,
-                                            right: 30,
-                                            bottom: 30),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            
-                                            Column(
-                                              children: <Widget>[
-                                                Text("Connnect to a health Specialist",
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 18)),
-                                                SizedBox(height: 3),
-                                                
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                            ),
-                            SizedBox(height: 10),
-                            Container(
-                              height: 300,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.blue),
-                              child: Column(
-                                children: <Widget>[
-                                 Padding(
-                                   padding: const EdgeInsets.all(15.0),
-                                   child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: <Widget>[
-                                            Text("Health Tips",
-                                                style: TextStyle(
-                                                    color: Colors.white
-                                                        .withOpacity(0.9),
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 20)),
-                                            Icon(
-                                              Icons.healing,
-                                              color: Colors.white,
-                                            )
-                                          ],
-                                        ),
-                                 ),
-                                ],
-                              )
-                            ),
+                                    ),
+                                  ],
+                                )),
                           ],
                         ),
                       ),

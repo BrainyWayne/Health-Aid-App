@@ -29,10 +29,13 @@ class _WeatherDetailsState extends State<WeatherDetails> {
                         color: Colors.red.withOpacity(0.9),
                         fontWeight: FontWeight.bold,
                         fontSize: 30)),
-                Icon(
-                  Icons.web_asset,
-                  color: Colors.red,
-                )
+                Container(
+                                                height: 40,
+                                                width: 40,
+                                                  child: Image.asset(
+                                                'assets/sun.png',
+                                                color: Colors.red,
+                                              ))
               ],
             ),
             SizedBox(height: 30,),
