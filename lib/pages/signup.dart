@@ -14,6 +14,9 @@ class _SignUpState extends State<SignUp> {
   TextEditingController fullnameController = new TextEditingController();
   TextEditingController emailController = new TextEditingController();
   TextEditingController passwordController = new TextEditingController();
+  TextEditingController genderController = new TextEditingController();
+  TextEditingController specialController = new TextEditingController();
+  TextEditingController ageController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +29,7 @@ class _SignUpState extends State<SignUp> {
               ClipPath(
                 clipper: WaveClipper2(),
                 child: Container(
-                  child: Column(
-                    
-                  ),
+                  child: Column(),
                   width: double.infinity,
                   height: 240,
                   decoration: BoxDecoration(
@@ -39,9 +40,7 @@ class _SignUpState extends State<SignUp> {
               ClipPath(
                 clipper: WaveClipper3(),
                 child: Container(
-                  child: Column(
-                    
-                  ),
+                  child: Column(),
                   width: double.infinity,
                   height: 240,
                   decoration: BoxDecoration(
@@ -57,38 +56,39 @@ class _SignUpState extends State<SignUp> {
                       Image.asset('assets/heart.png'),
                       Container(
                         decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          colors: [Colors.blue.withOpacity(0.9), Colors.blue.withOpacity(0.9)])),
+                            gradient: LinearGradient(colors: [
+                          Colors.blue.withOpacity(0.9),
+                          Colors.blue.withOpacity(0.9)
+                        ])),
                       )
                     ],
                   ),
                   width: double.infinity,
                   height: 240,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          colors: [Colors.blue, Colors.blue])),
+                      gradient:
+                          LinearGradient(colors: [Colors.blue, Colors.blue])),
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(top: 60),
                 child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text("health",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                            )),
-                        Text("Aid",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25,
-                            )),
-                        
-                      ],
-                    ),
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text("health",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                        )),
+                    Text("Aid",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                        )),
+                  ],
+                ),
               ),
             ],
           ),
@@ -156,6 +156,52 @@ class _SignUpState extends State<SignUp> {
                   SizedBox(
                     height: 30,
                   ),
+                  TextField(
+                    controller: genderController,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: "Gender",
+                        hintStyle: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue))),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  TextField(
+                    controller: ageController,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: "Age",
+                        hintStyle: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue))),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+
+                  TextField(
+                    controller: specialController,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: "Special conditions",
+                        hintStyle: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue))),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
@@ -177,10 +223,10 @@ class _SignUpState extends State<SignUp> {
                       padding:
                           EdgeInsets.symmetric(horizontal: 40, vertical: 12),
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [Colors.blue, Colors.red]),
-                          borderRadius: BorderRadius.circular(10),
-                          ),
+                        gradient:
+                            LinearGradient(colors: [Colors.blue, Colors.red]),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                       child: Text("Sign up",
                           style: TextStyle(
                               color: Colors.white,
@@ -189,10 +235,13 @@ class _SignUpState extends State<SignUp> {
                   ),
                   SizedBox(height: 30),
                   InkWell(
-                    onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Login()));
-                      },
-                                      child: Text("I am already a member",
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => Login()));
+                    },
+                    child: Text("I am already a member",
                         style: TextStyle(
                             color: Colors.blue, fontWeight: FontWeight.bold)),
                   )

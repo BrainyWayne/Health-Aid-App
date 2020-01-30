@@ -19,7 +19,6 @@ class _WeatherDetailsState extends State<WeatherDetails> {
             SizedBox(
               height: 30,
             ),
-            rowDays(),
             SizedBox(height: 30,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
