@@ -158,7 +158,6 @@ class _SignUpState extends State<SignUp> {
                   ),
                   TextField(
                     controller: genderController,
-                    obscureText: true,
                     decoration: InputDecoration(
                         hintText: "Gender",
                         hintStyle: TextStyle(
@@ -173,7 +172,6 @@ class _SignUpState extends State<SignUp> {
                   ),
                   TextField(
                     controller: ageController,
-                    obscureText: true,
                     decoration: InputDecoration(
                         hintText: "Age",
                         hintStyle: TextStyle(
@@ -189,7 +187,6 @@ class _SignUpState extends State<SignUp> {
 
                   TextField(
                     controller: specialController,
-                    obscureText: true,
                     decoration: InputDecoration(
                         hintText: "Special conditions",
                         hintStyle: TextStyle(
