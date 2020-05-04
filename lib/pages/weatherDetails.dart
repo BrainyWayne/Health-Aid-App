@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:health_aid_app/util/rowDays.dart';
 
 class WeatherDetails extends StatefulWidget {
   @override
@@ -14,12 +13,14 @@ class _WeatherDetailsState extends State<WeatherDetails> {
         duration: Duration(milliseconds: 500),
         curve: Curves.easeIn,
         child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical:20),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           children: <Widget>[
             SizedBox(
               height: 30,
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -29,18 +30,20 @@ class _WeatherDetailsState extends State<WeatherDetails> {
                         fontWeight: FontWeight.bold,
                         fontSize: 30)),
                 Container(
-                                                height: 40,
-                                                width: 40,
-                                                  child: Image.asset(
-                                                'assets/sun.png',
-                                                color: Colors.red,
-                                              ))
+                    height: 40,
+                    width: 40,
+                    child: Image.asset(
+                      'assets/sun.png',
+                      color: Colors.red,
+                    ))
               ],
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Hero(
               tag: "widget",
-                          child: Container(
+              child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15), color: Colors.red),
@@ -61,8 +64,8 @@ class _WeatherDetailsState extends State<WeatherDetails> {
                                       color: Colors.white, fontSize: 40)),
                               Text(
                                 "\u00b0",
-                                style:
-                                    TextStyle(color: Colors.white, fontSize: 45),
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 45),
                               )
                             ],
                           ),

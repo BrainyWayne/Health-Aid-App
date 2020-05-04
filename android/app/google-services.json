@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "711448466432",
+    "firebase_url": "https://health-aid-gh.firebaseio.com",
+    "project_id": "health-aid-gh",
+    "storage_bucket": "health-aid-gh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711448466432:android:5996e5cf390228554774e5",
+        "android_client_info": {
+          "package_name": "inc.loop.health_aid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711448466432-p5jogpbd6l8rs2ula9c4pogonrdi9p7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRbeBTrd8vtkycEknF_KlINrb0a_B26_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711448466432-p5jogpbd6l8rs2ula9c4pogonrdi9p7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

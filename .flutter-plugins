@@ -1,2 +1,17 @@
 # This is a generated file; do not edit or check into version control.
-open_file=/Users/franciseshun/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/open_file-3.0.1/
+cloud_firestore=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.5/
+cloud_firestore_web=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/
+firebase_auth=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.15.5+3/
+firebase_auth_web=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.2/
+firebase_core=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.4+3/
+firebase_core_web=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/
+firebase_messaging=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-6.0.13/
+fluttertoast=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-4.0.1/
+google_sign_in=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.4.4/
+google_sign_in_web=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.9.1/
+path_provider=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.7/
+path_provider_macos=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+1/
+sqflite=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.0/
+url_launcher=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.5/
+url_launcher_macos=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-0.0.1+5/
+url_launcher_web=/home/loop/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.1+2/

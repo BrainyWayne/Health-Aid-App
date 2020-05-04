@@ -1,105 +1,123 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:health_aid_app/util/rowDays.dart';
+import 'package:health_aid_app/models/health_tip_model.dart';
+import 'package:health_aid_app/util/back_button.dart';
 
-class HealthTip extends StatefulWidget {
-  @override
-  _HealthTipState createState() => _HealthTipState();
-}
-
-
-class _HealthTipState extends State<HealthTip> {
+class HealthTip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
-        curve: Curves.easeIn,
-        child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-          children: <Widget>[
-            SizedBox(
-              height: 30,
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Row(
+    ThemeData _theme = Theme.of(context);
+
+    return Scaffold(
+      body: ListView(
+        children: <Widget>[
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("Weather",
+                Text("Health Tips",
                     style: TextStyle(
                         color: Colors.red.withOpacity(0.9),
                         fontWeight: FontWeight.bold,
                         fontSize: 30)),
                 Container(
-                    height: 40,
-                    width: 40,
-                    child: Image.asset(
-                      'assets/sun.png',
-                      color: Colors.red,
-                    ))
+                  height: 40,
+                  width: 40,
+                  child: KNotification(),
+                )
               ],
             ),
-            SizedBox(
-              height: 30,
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 50),
+            child: Text(
+              'Get health tips from our daily health update blog and stay healty',
+              textAlign: TextAlign.center,
             ),
-            Hero(
-              tag: "widget",
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15), color: Colors.red),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(
-                          top: 30, left: 30, right: 30, bottom: 30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text("36",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 40)),
-                              Text(
-                                "\u00b0",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 45),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Container(
-                            width: 50,
-                            height: 50,
-                            child: Image.asset(
-                              'assets/jotta-cloud.png',
-                            ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Column(
-                            children: <Widget>[
-                              Text("Kumasi",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 18)),
-                              SizedBox(height: 3),
-                              Text("Mostly Sunny",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 15)),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            height: 320,
+            // padding: EdgeInsets.symmetric(horizontal: 20),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                HealthTipCard(),
+              ],
+            ),
+          ),
+          SizedBox(height: 10),
+          KBackButton(color: Colors.black),
+        ],
+      ),
+    );
+  }
+}
+
+class HealthTipCard extends StatelessWidget {
+  final HEALTHTIP healthtip;
+  final int index;
+
+  const HealthTipCard({
+    Key key,
+    this.healthtip,
+    this.index,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    ThemeData _theme = Theme.of(context);
+    return Card(
+      margin: EdgeInsets.only(left: 10, bottom: 20, right: 10),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+      color: Colors.yellow[100],
+      child: Container(
+        width: 220,
+        padding: EdgeInsets.all(10),
+        // height: 200,
+        child: Column(
+          children: <Widget>[
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Monday Apirl 34th',
+                style: _theme.textTheme.caption.copyWith(
+                  color: Colors.grey,
                 ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Neurobics for your mind',
+                style: _theme.textTheme.headline4,
+              ),
+            ),
+            Spacer(),
+            Expanded(
+              child: Row(
+                children: <Widget>[
+                  Text(
+                    '1/3',
+                    style: _theme.textTheme.caption,
+                  ),
+                  Spacer(),
+                  Text(
+                    'Read More',
+                    style: _theme.textTheme.caption,
+                  ),
+                  SizedBox(width: 5),
+                  Icon(EvaIcons.arrowForward)
+                ],
               ),
             ),
           ],

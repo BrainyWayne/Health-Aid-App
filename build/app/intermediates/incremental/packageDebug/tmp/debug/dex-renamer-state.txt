@@ -1,4 +1,0 @@
-#Wed Feb 19 18:47:25 GMT 2020
-base.0=/Users/franciseshun/Desktop/Mobile App Development/Health-Aid-App/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

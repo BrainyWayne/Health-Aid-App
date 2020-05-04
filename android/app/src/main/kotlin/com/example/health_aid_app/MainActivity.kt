@@ -1,4 +1,4 @@
-package com.example.health_aid_app
+package inc.loop.health_aid
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
